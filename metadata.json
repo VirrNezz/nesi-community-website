@@ -1,0 +1,6 @@
+{
+  "name": "NesiNezz's Website connection",
+  "description": "An immersive, cyberpunk-inspired furry-themed portfolio with interactive connection cards, expandable friends list, customizable tabs, dynamic music, and ambient database entry screen.",
+  "requestFramePermissions": ["autoplay"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
