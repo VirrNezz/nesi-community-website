@@ -1,0 +1,37 @@
+{
+  "entities": {
+    "Friend": {
+      "title": "Friend",
+      "description": "Furry friends and custom OCs",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "species": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "bio": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/friends/{friendId}": {
+      "schema": "Friend",
+      "description": "Furry friends collection"
+    },
+    "/contributors/{contributorId}": {
+      "schema": "Friend",
+      "description": "Contributors collection"
+    },
+    "/tracks/{trackId}": {
+      "schema": "Friend",
+      "description": "Tracks collection"
+    },
+    "/announcements/{announcementId}": {
+      "schema": "Friend",
+      "description": "Announcements collection"
+    },
+    "/test/{docId}": {
+      "schema": "Friend",
+      "description": "Connection test collection"
+    }
+  }
+}
