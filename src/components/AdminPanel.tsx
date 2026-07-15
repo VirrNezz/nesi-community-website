@@ -134,7 +134,7 @@ export default function AdminPanel({ isOpen, onClose }: AdminPanelProps) {
   const uploadToCloudinary = async (file: File): Promise<string | null> => {
     const formData = new FormData();
     formData.append('file', file);
-formData.append('upload_preset', 'nesi-presets');
+    formData.append('upload_preset', 'nesi-presets');
 
     try {
       const res = await fetch('https://api.cloudinary.com/v1_1/ocqdvpts/auto/upload', {
