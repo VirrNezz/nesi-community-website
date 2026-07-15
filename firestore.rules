@@ -4,7 +4,7 @@ service cloud.firestore {
     
     // 1. Safety Net: Mengunci semua akses global agar tidak bocor
     match /{document=**} {
-      allow read, write: if false;
+      allow read, write: if true;
     }
     
     // 2. Akses Koleksi Friends (Data OC Furry)
