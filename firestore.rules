@@ -2,32 +2,32 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     
-    // Global Safety Net default-deny catch-all
+    // 1. Safety Net: Mengunci semua akses global agar tidak bocor
     match /{document=**} {
       allow read, write: if false;
     }
     
-    // Friends collection rules
+    // 2. Akses Koleksi Friends (Data OC Furry)
     match /friends/{friendId} {
       allow read, write: if true;
     }
     
-    // Contributors collection rules
+    // 3. Akses Koleksi Contributors (Data Operator/Nesi)
     match /contributors/{contributorId} {
       allow read, write: if true;
     }
     
-    // Tracks collection rules
+    // 4. Akses Koleksi Tracks (Playlist Musik Matrix)
     match /tracks/{trackId} {
       allow read, write: if true;
     }
     
-    // Announcements collection rules
+    // 5. Akses Koleksi Announcements (Log Update Dashboard)
     match /announcements/{announcementId} {
       allow read, write: if true;
     }
     
-    // Test connection document rules
+    // 6. Jalur Handshake Test Koneksi Bawaan Proyek
     match /test/{docId} {
       allow read, write: if true;
     }
