@@ -154,7 +154,7 @@ export default function AdminPanel({ isOpen, onClose }: AdminPanelProps) {
 
   const handleAuthenticate = (e: React.FormEvent) => {
     e.preventDefault();
-    if (passcode === 'Nezz_ajah') {
+    if (passcode === '123') {
       setIsAuthenticated(true);
       setAuthError(false);
     } else {
